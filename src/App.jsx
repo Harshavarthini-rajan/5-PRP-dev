@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DataProvider from "./DataProvider";
 import LandingPage from "./LandingPage";
-import RegistrationScreen from "./Registration/RegistrationScreen";
+import RegistrationScreen from "./Components-Registration/RegistrationScreen";
 
 
 const router = createBrowserRouter([
