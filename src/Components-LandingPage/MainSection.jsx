@@ -200,8 +200,8 @@ const MainSection = () => {
         <h2>Ready to build your <br />professional future?</h2>
         <p>Join thousands of professionals and companies who have already found their perfect match through ConnectHire.</p>
         <div className="cta-buttons">
-          <button className="cta-find-btn">Find Your Next Role</button>
-          <button className="cta-hire-btn">Hire Top Talent</button>
+          <Link to=""><button className="cta-find-btn">Find Your Next Role</button></Link>
+          <Link to=""><button className="cta-hire-btn">Hire Top Talent</button></Link>
         </div>
       </div>
 
