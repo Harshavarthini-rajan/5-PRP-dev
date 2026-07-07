@@ -1,9 +1,15 @@
 import React from 'react'
-//import Discussion from '../assets/MeetingImage.png'
+import Header from './Components-LandingPage/Header'
+import MainSection from './Components-LandingPage/MainSection'
+import Footer from './Components-LandingPage/Footer'
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <>
+    <Header />
+      <MainSection />
+    <Footer />
+    </>
   )
 }
 

@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+}
+
+.header-logo h1 {
+  margin: 0;
+  color: #8037B0; 
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.btn-login {
+  background: none;
+  border: none;
+  color: #8037B0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.btn-get-started {
+  background-color: #7011e4;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px; 
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: opacity 0.2s ease; */
+}
+
+.btn-get-started:hover {
+  opacity: 0.9;
+}
+.btn-login:hover {
+  opacity: 0.8;
+}
