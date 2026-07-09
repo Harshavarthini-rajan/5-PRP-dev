@@ -1,11 +1,12 @@
-.header {
+.LandingPage-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 40px;
+  background-color: #B351B233;
 }
 
-.header-logo h1 {
+.LandingPage-header-logo h1 {
   margin: 0;
   color: #8037B0; 
   font-size: 28px;
@@ -13,23 +14,25 @@
   letter-spacing: -1.2px;
 }
 
-.header-btns {
+.LandingPage-header-btns {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 5px;
 }
 
-.btn-login {
-  background: none;
+.LandingPage-btn-login {
+  background: #8037B0;
   border: none;
-  color: #8037B0;
+  /* color: #8037B0; */
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 10px 24px;
+  border-radius: 50px; 
 }
 
-.btn-get-started {
+.LandingPage-btn-get-started {
   background-color: #7011e4;
   color: #ffffff;
   border: none;
@@ -38,12 +41,11 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  /* transition: opacity 0.2s ease; */
 }
 
-.btn-get-started:hover {
+.LandingPage-btn-get-started:hover {
   opacity: 0.9;
 }
-.btn-login:hover {
+.LandingPage-btn-login:hover {
   opacity: 0.8;
 }

@@ -1,25 +1,30 @@
-.landingPage-intro-container {
+.LandingPage-intro-container {
   width: 100%;
 }
 
-.landingPage-intro-section {
-  display: flex;
+.LandingPage-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  padding: 5rem 8%;
-  gap: 2rem;
+  justify-content: center;
+  padding: 80px 90px;
+  gap: 20px;
   background: 
   radial-gradient(circle at 10% 10%, #cda5e3 0%, transparent 40%),
   radial-gradient(circle at 90% 80%, #F6EDFA 0%, transparent 50%),
   linear-gradient(135deg, #FFFDFD 0%, #FAF6FB 50%, #FAF5FC 100%);
 }
 
-.landingPage-main-content {
-  /* flex: 1; */
-  max-width: 540px;
+.LandingPage-main-content {
+  /* max-width: 540px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.landingPage-badge {
+.LandingPage-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -27,159 +32,192 @@
   border: 1px solid #EAD8F3;
   padding: 4px 12px;
   border-radius: 100px;
-  color: #8E33E4;
+  color: #7700F5;
   font-size: 10px;
   font-weight: 800;
-  margin-left: 200px;
+  /* margin-left: 200px; */
   letter-spacing: 0.05em;
 }
 
-.landingPage-badge-dot {
+.LandingPage-badge-dot {
   width: 6px;
   height: 6px;
-  background-color: #8E33E4;
+  background-color: #7700F5;
   border-radius: 50%;
 }
 
-.landingPage-intro-title {
+.LandingPage-intro-title {
   color: #8037B0;
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.15;
   margin: 1.5rem 0 1rem 0;
   letter-spacing: -0.02em;
+text-align: center;
 }
 
-.landingPage-intro-description {
+.LandingPage-intro-description {
   color: #716f6f;
-  /* font-size: 1rem; */
+  font-size: 16px;;
   line-height: 1.6;
   /* margin-left: 20px; */
   margin-bottom: 2rem;
 }
 
-.landingPage-profile-container {
+.LandingPage-profile-container {
   display: flex;
   flex-direction: column;
 }
 
-.landingPage-profile {
+.LandingPage-profile {
   display: flex;
-  align-items: center;
-  margin-left: 200px;
-  margin-top: 1rem;
+  justify-content: center;
+  /* margin-left: 250px; */
+  margin-top: 16px;
 }
 
-.landingPage-profiles-img {
-  height: 38px;
-  object-fit: contain;
+.LandingPage-profiles-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #CB80FC;
+}
+.LandingPage-profiles-img +.LandingPage-profiles-img {
+  margin-left: -15px; 
 }
 
-.landingPage-profile-text {
+.LandingPage-profile-text {
   color: #64748B;
   font-size: 12px;
   font-weight: 500;
-  margin-left: 120px;
+  text-align: center;
+  margin: 0;
 }
 
-.landingPage-intro-image-wrapper {
+.LandingPage-intro-image-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.landingPage-intro-image {
+.LandingPage-intro-image {
   width: 100%;
   max-width: 580px;
   margin-left: 4rem;
 }
+.LandingPage-profiles-count {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #EAD8F3; 
+  color: #8E33E4;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ffffff;
+  margin-left: -15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-.landingPage-OS-sources {
+.LandingPage-Partner-sources {
   background-color: #FFFFFF;
-  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  border-top: 1px solid #F1F5F9;
+  gap: 10px;
+  border-top: 1px solid #f1f5f954;
 }
 
-.landingPage-OS-sources-text {
+.LandingPage-Partner-sources-text {
   color: #85878a;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.2em;
 }
 
-.landingPage-logos-slider {
+.LandingPage-logos-slider {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 20px 90px;
   width: 100%;
-  max-width: 1000px;
-  gap: 2rem;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
-.landingPage-OS-logos {
+
+.LandingPage-Partner-logos-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.LandingPage-Partner-logos {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex: 1;
-  gap: 1rem;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
-.logo-img {
+.LandingPage-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.LandingPage-logo-img {
+  width: 100%;
+  max-width: 90px;
+  height: auto;
   object-fit: contain;
-  filter: grayscale(10%) contrast(95%);
-  cursor: pointer;
+  transition: all 0.5s ease-in-out; 
+  padding: 10px;
 }
-.logo-img.google { height: 24px; }
-.logo-img.claude { height: 30px; }
-.logo-img.deepseek { height: 32px; }
-.logo-img.gemini { height: 26px; }
-.logo-img.gradio { height: 20px; }
-.logo-img.copilot { height: 32px; }
+.LandingPage-logo-img img{
+  width: 60px;
+}
 
-.landingPage-rightarrow-icon {
+.LandingPage-rightarrow-icon {
   height: 30px;
   width: 30px;
   object-fit: contain;
   cursor: pointer;
+  user-select: none;
 }
 
-.landingPage-leftarrow-icon {
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-.landingPage-arrow-icon {
+.LandingPage-arrow-icon {
   height: 28px;
   width: 28px;
   object-fit: contain;
   cursor: pointer;
 }
 
-.landingPage-features-container {
-  padding: 60px 40px;
+.LandingPage-features-container {
+  padding: 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.landingPage-features-header {
+.LandingPage-features-header {
   text-align: center;
   margin-bottom: 70px;
 }
 
-.landingPage-features-title {
+.LandingPage-features-title {
   color: #8037B0; 
   font-size: 2.2rem;
   font-weight: 400;
   margin-bottom: 16px;
 }
 
-.landingPage-features-subtitle {
+.LandingPage-features-subtitle {
   color: #54709c; 
   font-size: 18px;
   max-width: 650px;
@@ -187,13 +225,13 @@
   line-height: 1.6;
 }
 
-.landingPage-features-grid {
+.LandingPage-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
-.landingPage-features-card {
+.LandingPage-features-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -202,7 +240,7 @@
   margin-right: 35px;
 }
 
-.landingPage-card-icon-wrapper {
+.LandingPage-card-icon-wrapper {
   width: 60px;
   height: 60px;
   border-radius: 16px;
@@ -212,19 +250,19 @@
   margin-bottom: 24px;
 }
 
-.landingPage-card-icon {
+.LandingPage-card-icon {
   width: 58px;
   height: 58px;
   object-fit: contain;
 }
 
-.landingPage-card-title {
+.LandingPage-card-title {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-.landingPage-arrow-icon {
+.LandingPage-arrow-icon {
   width: 12px;
   height: 12px;
   object-fit: contain;
@@ -232,15 +270,15 @@
   margin-top: 4px;
 }
 
-.landingPage-purple-text {
+.LandingPage-purple-text {
   color: #7c3aed;
 }
 
-.landingPage-pink-text {
+.LandingPage-pink-text {
   color: #db2777; 
 }
 
-.landingPage-card-description {
+.LandingPage-card-description {
   color: #475569;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -248,7 +286,7 @@
   min-height: 72px; 
 }
 
-.landingPage-card-features {
+.LandingPage-card-features {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -256,25 +294,25 @@
   width: 100%;
 }
 
-.landingPage-card-points {
+.LandingPage-card-points {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.landingPage-feature-icon {
+.LandingPage-feature-icon {
   width: 18px;
   height: 18px;
   object-fit: contain;
 }
 
-.landingPage-feature-text {
+.LandingPage-feature-text {
   color: #1e293b;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-.landingPage-card-link {
+.LandingPage-card-link {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -283,7 +321,7 @@
   transition: transform 0.2s ease;
 }
 
-.landingPage-datas-container{
+.LandingPage-datas-container{
   width:85%;
   margin:10px auto;
   padding:5px 0px 40px;
@@ -295,21 +333,21 @@
   color:#fff;
 }
 
-.landingPage-datas{
+.LandingPage-datas{
   text-align:center;
 }
 
-.landingPage-datas h2{
+.LandingPage-datas h2{
   font-size:40px;
   font-weight:700;
 }
 
-.landingPage-datas p{
+.LandingPage-datas p{
   margin-top:-18px;
   font-size:16px;
 }
 
-.landingPage-datas span{
+.LandingPage-datas span{
   display:block;
   width:45px;
   height:4px;
@@ -318,17 +356,17 @@
   border-radius:20px;
 }
 
-.landingPage-review-container{
+.LandingPage-review-container{
   width:85%;
   margin:90px auto;
 }
 
-.landingPage-review-header{
+.LandingPage-review-header{
   text-align:center;
   margin-bottom:70px;
 }
 
-.landingPage-review-tag{
+.LandingPage-review-tag{
   color: #8037B0;
   font-size:13px;
   font-weight:700;
@@ -336,63 +374,74 @@
   margin-bottom:10px;
 }
 
-.landingPage-review-title{
+.LandingPage-review-title{
   color: #8037B0;
   font-size:36px;
   font-weight:500;
 }
 
-.landingPage-review-wrapper{
-  display:flex;
-  justify-content:space-between;
-  gap:70px;
-  margin-left:40px;
-  margin-right:40px;
+.LandingPage-review-wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr;
+justify-items: center;
+align-items: center;
+width: 100%;
 }
 
-.landingPage-review-card{
-  flex:1;
-  margin:0 40px;
+.LandingPage-review-card{
+  /* flex:1;
+  margin:0 40px; */
+  max-width: 584px;
+  padding:40px;
+  border:1px solid #9c9c9c45;
+  border-radius: 12px;
 }
 
-.landingPage-review-content{
+.LandingPage-review-content{
   display:flex;
-  align-items:flex-start;
   gap:18px;
   margin-bottom:25px;
+  max-width: 454px ;
 }
 
-.landingPage-profile-image{
-  width:80px;
-  height:80px;
+.LandingPage-profile-image{
+  width:70px;
+  height:70px;
 }
 
-.landingPage-stars-image{
+.LandingPage-stars-image{
   width:200px;
 }
 
-.landingPage-review-user h4{
+.LandingPage-review-user h4{
   color: #8037B0;
   margin:4px 0;
+  font-size: 20px;
 }
 
-.landingPage-review-user p{
-  color:#64748b;
-  font-size:13px;
+.LandingPage-review-user p{
+  color:#4D5A81;
+  margin: 0;
+  font-size: 12px;
 }
 
-.landingPage-quotes-image{
-  width:65px;
-  margin-left:auto;
+.LandingPage-quotes-image{
+  width:99.16px;
+  height: 70px;
 }
 
-.landingPage-review-text{
-  color:#2c3541;
-  line-height:1.9;
+.LandingPage-review-text{
+  color:#202d51b7;
+  line-height: 29.25px;
   font-style:italic;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+width: 454px;
+
 }
 
-.landingPage-cta-container{
+.LandingPage-cta-container{
   width:85%;
   margin:90px auto;
   padding:10px 20px 50px;
@@ -403,25 +452,25 @@
   box-shadow:0 18px 35px rgba(124,58,237,.25);
 }
 
-.landingPage-cta-container h2{
+.LandingPage-cta-container h2{
   font-size:50px;
   font-weight:500;
   margin-bottom:18px;
 }
 
-.landingPage-cta-container p{
+.LandingPage-cta-container p{
   width:50%;
   margin:auto;
 }
 
-.landingPage-cta-buttons{
+.LandingPage-cta-buttons{
   display:flex;
   justify-content:center;
   gap:40px;
   margin-top:40px;
 }
 
-.landingPage-cta-find-btn{
+.LandingPage-cta-find-btn{
   border:none;
   padding:16px 48px;
   border-radius:40px;
@@ -431,7 +480,7 @@
   cursor:pointer;
 }
 
-.landingPage-cta-hire-btn{
+.LandingPage-cta-hire-btn{
   border:none;
   padding:16px 48px;
   border-radius:40px;
@@ -439,4 +488,203 @@
   color:#fff;
   font-weight:600;
   cursor:pointer;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .LandingPage-intro-section {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .LandingPage-intro-title {
+    font-size: 2.5rem;
+  }
+
+  .LandingPage-intro-image {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .LandingPage-features-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+  }
+
+  .LandingPage-features-card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .LandingPage-review-wrapper {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+
+  .LandingPage-review-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .LandingPage-cta-container p {
+    width: 80px; 
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Intro Section */
+  .LandingPage-intro-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .LandingPage-main-content {
+    align-items: center;
+  }
+
+  .LandingPage-intro-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .LandingPage-intro-text, 
+  .LandingPage-intro-description {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .LandingPage-intro-image-wrapper {
+    width: 100%;
+    order: -1;
+  }
+
+  .LandingPage-intro-image {
+    margin-left: 0;
+    max-width: 80%;
+  }
+
+  /* Partner Logos */
+  .LandingPage-logos-slider {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .LandingPage-Partner-logos {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .LandingPage-logo-container {
+    min-width: 120px;
+  }
+
+  .LandingPage-features-container {
+    padding: 40px 20px;
+    
+  }
+
+  .LandingPage-features-title {
+    font-size: 1.8rem;
+  }
+
+ .LandingPage-features-grid {
+    grid-template-columns: 1fr; 
+    justify-items: center;    
+    gap: 30px;
+  }
+
+  .LandingPage-features-card {
+    align-items: center;       
+    text-align: center;        
+    margin-left: 0;            
+    margin-right: 0;
+    max-width: 340px;          
+    width: 100%;
+  }
+
+  .LandingPage-card-features {
+    align-items: center;      
+  }
+
+
+  .LandingPage-datas-container {
+    width: 90%;
+    flex-direction: column;
+    padding: 30px 10px;
+    gap: 30px;
+    border-radius: 24px;
+  }
+
+  .LandingPage-datas h2 {
+    font-size: 32px;
+  }
+
+  .LandingPage-datas span {
+    margin: 10px auto 0;
+  }
+
+  .LandingPage-review-container {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .LandingPage-review-title {
+    font-size: 26px;
+  }
+
+  .LandingPage-review-card {
+    padding: 20px;
+  }
+
+  .LandingPage-review-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .LandingPage-quotes-image {
+    display: none;
+  }
+
+  .LandingPage-review-text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .LandingPage-cta-container {
+    width: 90%;
+    margin: 60px auto;
+    padding: 30px 20px;
+    border-radius: 24px;
+  }
+
+  .LandingPage-cta-container h2 {
+    font-size: 28px;
+  }
+
+  .LandingPage-cta-container p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .LandingPage-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 280px;
+    margin: 30px auto 0;
+  }
+
+  .LandingPage-cta-find-btn,
+  .LandingPage-cta-hire-btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
 }

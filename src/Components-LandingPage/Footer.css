@@ -1,4 +1,6 @@
-.footer {
+.LandingPage-footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background: #07122d;
   color: #ffffff;
@@ -6,55 +8,54 @@
   box-sizing: border-box;
 }
 
-.footer-container {
+.LandingPage-footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 70px;
+  gap: 30px;
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.footer-text {
+.LandingPage-footer-text {
   width: 390px;
 }
 
-.footer-logo {
+.LandingPage-footer-logo {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 18px;
 }
 
-.footer-description {
+.LandingPage-footer-description {
   color: #8f9ab8;
   font-size: 15px;
   line-height: 1.9;
   margin-bottom: 28px;
+  width: 264px;
 }
 
-.footer-icons {
+.LandingPage-footer-icons {
   display: flex;
   gap: 15px;
   cursor: pointer;
 }
 
-.footer-ShareIcon img {
+.LandingPage-footer-ShareIcon img,
+.LandingPage-footer-MailIcon img {
   width: 38px;
   height: 38px;
 }
 
-.footer-MailIcon img {
-  width: 38px;
-  height: 38px;
-}
-
-.footer-navs {
+.LandingPage-footer-navs {
   display: flex;
   flex-direction: column;
   min-width: 200px;
 }
 
-.footer-navs h4 {
+.LandingPage-footer-navs h4 {
   color: #ffffff;
   font-size: 14px;
   letter-spacing: 2px;
@@ -63,7 +64,7 @@
   font-weight: 700;
 }
 
-.footer-navs a {
+.LandingPage-footer-navs a {
   color: #8f9ab8;
   text-decoration: none;
   margin-bottom: 16px;
@@ -71,25 +72,29 @@
   transition: .3s;
 }
 
-.footer-navs a:hover {
+.LandingPage-footer-navs a:hover {
   color: #ffffff;
 }
 
-.newsletter-text {
+.LandingPage-newsletter-text {
   color: #8f9ab8;
+  width: 264px;
   font-size: 15px;
   line-height: 1.7;
   margin-top: 0px;
   margin-bottom: 22px;
 }
 
-.newsletter-box {
+.LandingPage-newsletter-box {
   display: flex;
   align-items: center;
+  position: relative;
+  max-width: 350px; 
+  width: 100%;
 }
 
-.newsletter-box input {
-  width: 220px;
+.LandingPage-newsletter-box input {
+  width: 100%;
   height: 48px;
   border: 1px solid rgba(255,255,255,.08);
   background: #0d1b40;
@@ -100,11 +105,11 @@
   font-size: 14px;
 }
 
-.newsletter-box input::placeholder {
+.LandingPage-newsletter-box input::placeholder {
   color: #7d88a8;
 }
 
-.newsletter-box button {
+.LandingPage-newsletter-box button {
   width: 42px;
   height: 42px;
   margin-left: -48px;
@@ -116,19 +121,19 @@
   cursor: pointer;
 }
 
-.newsletter-box button img {
+.LandingPage-newsletter-box button img {
   width: 44px;
   height: 44px;
 }
 
-.footer-divider {
+.LandingPage-footer-divider {
   width: 100%;
   height: 1px;
   background: rgba(255,255,255,.08);
   margin: 35px 0 25px;
 }
 
-.footer-bottom {
+.LandingPage-footer-bottom {
   max-width: 1300px;
   margin: auto;
   display: flex;
@@ -136,23 +141,102 @@
   align-items: center;
 }
 
-.footer-bottom p {
+.LandingPage-footer-bottom p {
   color: #7683a4;
   font-size: 14px;
 }
 
-.footer-links {
+.LandingPage-footer-links {
   display: flex;
   gap: 30px;
 }
 
-.footer-links a {
+.LandingPage-footer-links a {
   color: #7683a4;
   text-decoration: none;
   font-size: 14px;
   transition: .3s;
 }
 
-.footer-links a:hover {
+.LandingPage-footer-links a:hover {
   color: white;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .LandingPage-footer {
+    padding: 60px 40px 25px;
+  }
+
+  .LandingPage-footer-container {
+    flex-wrap: wrap; 
+    gap: 40px;
+  }
+
+  .LandingPage-footer-text {
+    width: 100%; 
+    max-width: 400px;
+  }
+
+  .LandingPage-footer-navs {
+    min-width: 180px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .LandingPage-footer {
+    padding: 40px 20px 20px; 
+  }
+
+  .LandingPage-footer-container {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 0px; 
+  }
+
+  .LandingPage-footer-text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .LandingPage-footer-description {
+    width: 100%; 
+  }
+
+  .LandingPage-footer-navs {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .LandingPage-footer-navs h4 {
+    margin-top: 25px; 
+    margin-bottom: 15px;
+  }
+
+  .LandingPage-footer-navs a {
+    margin-bottom: 12px;
+  }
+
+  .LandingPage-newsletter-text {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .LandingPage-newsletter-box {
+    max-width: 100%; 
+  }
+
+  .LandingPage-footer-bottom {
+    flex-direction: column-reverse; 
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .LandingPage-footer-links {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
