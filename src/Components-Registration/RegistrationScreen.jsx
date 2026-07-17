@@ -65,7 +65,7 @@ const RegistrationScreen = () => {
                             </div>
                         </div>
                         <div className='UserRegistration-Navbar'>
-                            <p style={{ textAlign: 'center', fontWeight: "700", color: "#6B7280", fontSize: "13px", margin: "10px 0" }}>SELECT YOUR ROLE</p>
+                            <p>SELECT YOUR ROLE</p>
                             {Users.map((user, index) => (
                                 <div key={index} onClick={() => SetselectedRole(user.title)} className={selectedRole === user.title ? "Userreg-Nav-items Active" : "Userreg-Nav-items"}>
                                     <div className='Userreg-Nav'>
@@ -78,7 +78,7 @@ const RegistrationScreen = () => {
                                         </div>
 
                                         <div>
-                                            <input type="radio" checked={selectedRole === user.title} onChange={(e) => setSelectedRole(e.target.value)} />
+                                            <input type="radio" checked={selectedRole === user.title} onChange={(e) => SetselectedRole(e.target.value)} />
                                         </div>
                                     </div>
 
@@ -88,13 +88,13 @@ const RegistrationScreen = () => {
 
                         </div>
                         <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <button onClick={()=>navigate('/PRP')} style={{padding:"10px",width:"fit-content",background:"#8D61D7",color:"#fff",border:"none",borderRadius:"6px"}}> <img src={Back} alt="back Icon" width={10} /> Return to Home</button>
+                    <button onClick={()=>navigate('/PRP_Portal')} className='Regscr-Backbtn'> <img src={Back} alt="back Icon" width={10} /> Return to Home</button>
                     </div>
                     </div>
                     
                     <div style={{ display: "flex", gap: "5px", margin: "10px", alignItems: "center", padding: "0px 20px" }}>
-                        <img src={Help} alt="help" width={20} />
-                        <Link style={{ margin: "0", fontSize: "12px", textDecoration: "none", color: "black" }}>Need help? Contact support@campusconnect.com</Link>
+                        <img src={Help} alt="help" width={10} />
+                        <Link style={{ margin: "0", fontSize: "10px", textDecoration: "none", color: "black" }}>Need help? Contact support@campusconnect.com</Link>
                     </div>
                 </div>
                 <div className='UserRegistration-Mainsec'>

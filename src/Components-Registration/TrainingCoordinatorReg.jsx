@@ -5,13 +5,16 @@ import EyeImg from "../assets/RegistrationAssets/EyeIcon.png";
 import DownArrow from "../assets/RegistrationAssets/DownArrow.png";
 import Hide from "../assets/RegistrationAssets/HidePwd.png";
 import RightArrowImg from "../assets/RegistrationAssets/RightArrow.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../DataProvider';
+import Modalbox from '../Reusable-Components/Modalbox';
 
 const TrainingCoordinatorReg = () => {
+  const navigate=useNavigate();
   const { user, setUser } = useData();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [modal, setModal] = useState({ show: false, success: false, message: "" });
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -129,10 +132,17 @@ const TrainingCoordinatorReg = () => {
         confirmPassword: '',
         terms: "false"
       })
+      setModal({
+        show: true,
+        success: true,
+        message: "Successfully Registered! Please Login."
+      });
 
-      console.log('Form Submitted Data:', formData);
-      alert('Registration Successful!');
     }
+  };
+  const closeModal = () => {
+    setModal({ show: false, success: false, message: "" });
+    navigate('/PRP_Portal/Login');
   };
   return (
 
@@ -297,29 +307,30 @@ const TrainingCoordinatorReg = () => {
         </div>
 
         <div className="Stu-Reg-terms-checkbox-container">
-                            <div style={{display:"flex",alignItems:"center"}}>
-                            <input
-                                type="checkbox"
-                                name="terms"
-                                checked={formData.terms}
-                                id="student-terms"
-                                onChange={handleChange}
-                            />
-                            <label htmlFor="student-terms">
-                                I agree to the <Link to="#terms">Terms of Use</Link> and <Link to="#privacy">Privacy Policy</Link>
-                            </label>
-                            </div>
-                            {errors.terms && <div className="TC-Reg-err-msg" style={{marginBottom: '10px' }}>{errors.terms}</div>}
-                        </div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <input
+              type="checkbox"
+              name="terms"
+              checked={formData.terms}
+              id="student-terms"
+              onChange={handleChange}
+            />
+            <label htmlFor="student-terms">
+              I agree to the <Link to="#terms">Terms of Use</Link> and <Link to="#privacy">Privacy Policy</Link>
+            </label>
+          </div>
+          {errors.terms && <div className="TC-Reg-err-msg" style={{ marginBottom: '10px' }}>{errors.terms}</div>}
+        </div>
         <div style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}>
           <button type="submit" className="TC-Reg-btn">
             Complete Registration <img src={RightArrowImg} alt="Arrow" className="Stu-Reg-btn-arrow" />
           </button>
         </div>
         <p className="TC-Reg-login-redirect">
-          Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold">Log in</span>
+          Already have an account? <span className="TC-Reg-purple-link TC-Reg-bold"  onClick={()=>navigate('/PRP_Portal/Login/TrainingCoordinator')}>Log in</span>
         </p>
       </form>
+      <Modalbox show={modal.show} success={modal.success} message={modal.message} onClose={closeModal} />
     </div>
   )
 }

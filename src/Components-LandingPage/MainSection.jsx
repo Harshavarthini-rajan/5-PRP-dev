@@ -67,7 +67,7 @@ const MainSection = () => {
                         <p className="LandingPage-profile-text">Join 50k+ professionals hired this month</p>
                         <div className="LandingPage-profile">
                             <img src={Profiles} alt="Profile 1" className="LandingPage-profiles-img" />
-                            <img style={{ background: "#C7D3FF", paddingLeft: "-10px" }} src={Profiles} alt="Profile 2" width={50} className="LandingPage-profiles-img" />
+                            <img className="LandingPage-profiles-img-secondary" src={Profiles} alt="Profile 2" width={50} />
                             <div className="LandingPage-profiles-count">+5k</div>
                         </div>
 
@@ -129,7 +129,7 @@ const MainSection = () => {
                                 <span className="LandingPage-feature-text">AI Resume Optimization</span>
                             </div>
                         </div>
-                        <Link  className="LandingPage-card-link LandingPage-purple-text">
+                        <Link to={'/PRP_Portal/UserRegistration'} className="LandingPage-card-link LandingPage-purple-text">
                             Get Started<img src={PurpleArrow} alt="Arrow" className="LandingPage-arrow-icon" />
                         </Link>
                     </div>
@@ -150,7 +150,7 @@ const MainSection = () => {
                                 <span className="LandingPage-feature-text">Hiring Analytics Dashboard</span>
                             </div>
                         </div>
-                        <Link to="" className="LandingPage-card-link LandingPage-purple-text">
+                        <Link to={'/PRP_Portal/UserRegistration'}  className="LandingPage-card-link LandingPage-purple-text">
                             Start Hiring <img src={PurpleArrow} alt="Arrow" className="LandingPage-arrow-icon" />
                         </Link>
                     </div>
@@ -171,7 +171,7 @@ const MainSection = () => {
                                 <span className="LandingPage-feature-text">Corporate Network Access</span>
                             </div>
                         </div>
-                        <Link to="" className="LandingPage-card-link LandingPage-pink-text">
+                        <Link to={'/PRP_Portal/UserRegistration'}  className="LandingPage-card-link LandingPage-pink-text">
                             Partner with Us <img src={PinkArrow} alt="Arrow" className="LandingPage-arrow-icon" />
                         </Link>
                     </div>
